@@ -1,4 +1,4 @@
-const {beginTransaction,commit,rollback,close} = require('../src/db')
+const {beginTransaction,commit,rollback,close} = require('../db')
 
 async function withTransaction( callback ) {
   try {

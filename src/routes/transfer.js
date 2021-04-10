@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const { query } = require('../db')
 const moment = require('moment');
-const withTransaction = require('../../helpers/withTransaction')
+const withTransaction = require('../helpers/withTransaction')
 router.post('/', async (req, res) => {
   try {
     await withTransaction( async () => {
