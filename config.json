@@ -1,6 +1,6 @@
 {
   "sqlConnectionDetails": {
-    "host": "localhost",
+    "host": "db.cx2lfydxwffp.us-east-1.rds.amazonaws.com",
     "user": "root",
     "port": 3306,
     "password": "12345678",
