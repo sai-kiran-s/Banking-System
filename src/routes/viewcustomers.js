@@ -4,7 +4,7 @@ const {query} = require('../db')
 
 router.get('/all',async (req,res)=>{
   try{
-    let result = await query(`SELECT * FROM CUSTOMER;`);
+    let result = await query(`SELECT * FROM customer ;`);
     return res.status(200).send({customers:result})
   }
   catch(err){
@@ -15,7 +15,7 @@ router.get('/all',async (req,res)=>{
 router.get('/showcustomer/:account_number',async (req,res)=>{
   try{
     let acc_no = req.params.account_number  
-    let result = await query(`SELECT * FROM CUSTOMER where account_number LIKE '${acc_no}';`);
+    let result = await query(`SELECT * FROM customer where account_number LIKE '${acc_no}';`);
     return res.status(200).send({customer:result})
   }
   catch(err){
@@ -26,7 +26,7 @@ router.get('/showcustomer/:account_number',async (req,res)=>{
 router.get('/exceptcustomer/:account_number',async (req,res)=>{
   try{
     let acc_no = req.params.account_number  
-    let result = await query(`SELECT * FROM CUSTOMER where account_number not LIKE '${acc_no}';`);
+    let result = await query(`SELECT * FROM customer where account_number not LIKE '${acc_no}';`);
     return res.status(200).send({customers:result})
   }
   catch(err){

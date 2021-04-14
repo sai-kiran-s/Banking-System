@@ -4,7 +4,7 @@ const {query} = require('../db')
 
 router.get('/all',async (req,res)=>{
   try{
-    let result = await query(`SELECT * FROM TRANSACTION;`);
+    let result = await query(`SELECT * FROM transaction;`);
     return res.status(200).send({transactions:result})
   }
   catch(err){
@@ -15,7 +15,7 @@ router.get('/all',async (req,res)=>{
 router.get('/:account_number',async (req,res)=>{
   try{
     let acc_no = req.params.account_number  
-    let result = await query(`SELECT * FROM TRANSACTION where sender_account_number LIKE '${acc_no}' or receiver_account_number LIKE '${acc_no}';`);
+    let result = await query(`SELECT * FROM transaction where sender_account_number LIKE '${acc_no}' or receiver_account_number LIKE '${acc_no}';`);
     return res.status(200).send({transactions:result})
   }
   catch(err){
