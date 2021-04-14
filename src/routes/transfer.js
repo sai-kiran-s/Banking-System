@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
   try {
     await withTransaction(async () => {
       let { sender_account_number, receiver_account_number, amount } = req.body;
-      let datetime = moment(new Date()).utc(true).format()
+      let datetime = moment(new Date()).format()
       let sender_account_balance = await query(`SELECT account_balance FROM customer where account_number='${sender_account_number}';`);
       console.log(sender_account_balance);
       console.log(sender_account_balance[0]);
