@@ -1,0 +1,10 @@
+{
+  "sqlConnectionDetails": {
+    "host": "localhost",
+    "user": "root",
+    "port": 3306,
+    "password": "12345678",
+    "database": "Banking_System",
+    "multipleStatements": true
+  }
+}

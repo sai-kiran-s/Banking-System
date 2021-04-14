@@ -30,7 +30,7 @@ router.get('/exceptcustomer/:account_number',async (req,res)=>{
     return res.status(200).send({customers:result})
   }
   catch(err){
-    return res.status(500).send({error:err})
+    return res.status(500).send({message:err})
   }
 })
 

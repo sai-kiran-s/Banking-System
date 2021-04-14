@@ -8,7 +8,7 @@ router.get('/all',async (req,res)=>{
     return res.status(200).send({transactions:result})
   }
   catch(err){
-    return res.status(500).send({error:err})
+    return res.status(500).send({message:err})
   }
 })
 
@@ -19,7 +19,7 @@ router.get('/:account_number',async (req,res)=>{
     return res.status(200).send({transactions:result})
   }
   catch(err){
-    return res.status(500).send({error:err})
+    return res.status(500).send({message:err})
   }
 })
 
